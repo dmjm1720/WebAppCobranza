@@ -60,7 +60,7 @@ public class DAO {
 
             //this.cnSAE = DriverManager.getConnection("jdbc:sqlserver://ASPEL;databaseName=SAE70Empre01", "gastos", "k1CruJ@raDix");
             //Local
-           this.cnSAE = DriverManager.getConnection("jdbc:sqlserver://192.168.0.104;databaseName=SAE80Empre01", "sa", "DevSysM4g*22");
+           this.cnSAE = DriverManager.getConnection("jdbc:sqlserver://DESKTOP-9TOA5T5\\SQLEXPRESS;databaseName=SAE80Empre01", "sa", "dev22");
         } catch (ClassNotFoundException | SQLException e) {
         }
     }
