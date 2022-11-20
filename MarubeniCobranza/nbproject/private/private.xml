@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/DMJM/Documents/GitRepos/COBRANZA/MarubeniCobranza/src/java/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/DMJM/Documents/GitRepos/COBRANZA/MarubeniCobranza/web/WEB-INF/jboss-web.xml</file>
-            <file>file:/C:/Users/DMJM/Documents/GitRepos/COBRANZA/MarubeniCobranza/web/Views/Pagos/Regresar.xhtml</file>
-            <file>file:/C:/Users/DMJM/Documents/GitRepos/COBRANZA/MarubeniCobranza/src/java/mx/conexion/DAO.java</file>
-            <file>file:/C:/Users/DMJM/Documents/GitRepos/COBRANZA/MarubeniCobranza/src/java/mx/bean/CancelarPagosBean.java</file>
-            <file>file:/C:/Users/DMJM/Documents/GitRepos/COBRANZA/MarubeniCobranza/src/java/mx/bean/FacturaProcesoBean.java</file>
-            <file>file:/C:/Users/DMJM/Documents/GitRepos/COBRANZA/MarubeniCobranza/web/WEB-INF/web.xml</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

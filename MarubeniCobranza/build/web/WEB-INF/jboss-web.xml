@@ -4,7 +4,7 @@
   <!--  <security-domain>propsFile</security-domain> -->
   <!--  <server-instance>default-server</server-instance> -->
   <!-- does mapping to server -->
-<!--  <context-root>/index.jsf</context-root>
-  <virtual-host>cobranza.marubeni.com.mx</virtual-host>-->
+<!--  <context-root>/index.jsf</context-root>-->
+<!--  <virtual-host>cobranza.marubeni.com.mx</virtual-host>-->
   <!-- does mapping to host inside server -->
 </jboss-web>

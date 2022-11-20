@@ -5,17 +5,17 @@
         <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
 
         <!--        //ny  -->
-<!--        <property name="hibernate.connection.url">jdbc:sqlserver://10.220.221.158\SQLEXPRESS;databaseName=cobranza</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://10.220.221.158\SQLEXPRESS;databaseName=cobranza</property>
         <property name="hibernate.connection.username">gastos_usrdb</property>
-        <property name="hibernate.connection.password">k1CruJ@raDix</property>-->
+        <property name="hibernate.connection.password">k1CruJ@raDix</property>
         
         <!--        <property name="hibernate.connection.url">jdbc:sqlserver://ASPEL;databaseName=cobranza</property>
         <property name="hibernate.connection.username">gastos</property>
         <property name="hibernate.connection.password">k1CruJ@raDix</property>-->
         
-        <property name="hibernate.connection.url">jdbc:sqlserver://DESKTOP-9TOA5T5\SQLEXPRESS;databaseName=cobranza</property>
+<!--        <property name="hibernate.connection.url">jdbc:sqlserver://DESKTOP-9TOA5T5\SQLEXPRESS;databaseName=cobranza</property>
         <property name="hibernate.connection.username">sa</property>
-        <property name="hibernate.connection.password">dev22</property>
+        <property name="hibernate.connection.password">dev22</property>-->
         
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>

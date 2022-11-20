@@ -14,39 +14,40 @@ import org.primefaces.context.RequestContext;
 @javax.inject.Named("loginBean")
 @SessionScoped
 public class LoginBean extends mx.conexion.DAO implements java.io.Serializable {
-
+    
     private Usuario usuario;
     private String nombre;
     private String password;
-
+    private final String llave = "44e7e31279ccd7ff4a3f67c2520b8296df27d2ac8ba58dcd47be865674fc8f8b3f116b866e0a48204b331cef2dc6ed4df9d36a739ccaeaa81c5ef736fa2365ab";
+    
     public LoginBean() {
         this.usuario = new Usuario();
     }
-
+    
     public Usuario getUsuario() {
         return this.usuario;
     }
-
+    
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
+    
     public String getNombre() {
         return this.nombre;
     }
-
+    
     public void setNombreUsuario(String nombre) {
         this.nombre = nombre;
     }
-
+    
     public String getPassword() {
         return this.password;
     }
-
+    
     public void setPassword(String password) {
         this.password = password;
     }
-
+    
     public void login() throws InterruptedException, SQLException, IOException {
         RequestContext context = RequestContext.getCurrentInstance();
         @SuppressWarnings("UnusedAssignment")
@@ -57,21 +58,22 @@ public class LoginBean extends mx.conexion.DAO implements java.io.Serializable {
         boolean loggedIn = false;
         String ruta = "";
         LoginDao uDao = new LoginUsuarioImpl();
+        this.usuario.setClave(llave + this.usuario.getClave());
         this.usuario = uDao.login(this.usuario);
-
+        
         if (this.usuario != null) {
             loggedIn = true;
             FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("nombre", this.usuario);
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Bienvenido", this.usuario.getNombre());
-              ruta = "/Views/Pagos/Pagos.jsf";
-            //ruta = "/WebAppCobranza/Views/Pagos/Pagos.jsf";
+            //ruta = "/Views/Pagos/Pagos.jsf";
+            ruta = "/WebAppCobranza/Views/Pagos/Pagos.jsf";
         } else {
             loggedIn = false;
             message = new FacesMessage(FacesMessage.SEVERITY_WARN, "¡Error de sesión!", "Usuario o password incorrectos...");
             FacesContext.getCurrentInstance().addMessage(null, message);
             this.usuario = new Usuario();
         }
-
+        
         FacesContext.getCurrentInstance().addMessage(null, message);
         try {
             FacesContext.getCurrentInstance().addMessage(null, message2);
@@ -83,7 +85,7 @@ public class LoginBean extends mx.conexion.DAO implements java.io.Serializable {
         con.redirect(ruta);
         //context.addCallbackParam("ruta", ruta);
     }
-
+    
     public void cerrarSesion() {
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
     }
