@@ -457,7 +457,7 @@ public class FacturaProcesoBean extends DAO implements Serializable {
         ConectarSAE();
         Statement ps = getCnSAE().createStatement();
 
-        ResultSet rs = ps.executeQuery("SELECT dbo.CUEN_M01.CVE_CLIE, dbo.CUEN_M01.NO_FACTURA, dbo.CUEN_M01.IMPORTE, dbo.CUEN_M01.FECHA_APLI, dbo.CUEN_M01.NUM_MONED, dbo.CUEN_M01.TCAMBIO, dbo.CUEN_M01.IMPMON_EXT,dbo.CUEN_M01.STRCVEVEND FROM dbo.CUEN_M01 INNER JOIN dbo.FACTF01 ON dbo.CUEN_M01.REFER = dbo.FACTF01.CVE_DOC WHERE dbo.CUEN_M01.SIGNO=1 AND dbo.FACTF01.STATUS<>'C' AND dbo.CUEN_M01.FECHA_APLI >'2020-06-01'");
+        ResultSet rs = ps.executeQuery("SELECT dbo.CUEN_M01.CVE_CLIE, dbo.CUEN_M01.NO_FACTURA, dbo.CUEN_M01.IMPORTE, dbo.CUEN_M01.FECHA_APLI, dbo.CUEN_M01.NUM_MONED, dbo.CUEN_M01.TCAMBIO, dbo.CUEN_M01.IMPMON_EXT,dbo.CUEN_M01.STRCVEVEND FROM dbo.CUEN_M01 INNER JOIN dbo.FACTF01 ON dbo.CUEN_M01.REFER = dbo.FACTF01.CVE_DOC WHERE dbo.CUEN_M01.SIGNO=1 AND dbo.FACTF01.STATUS<>'C' AND dbo.CUEN_M01.FECHA_APLI >'2023-06-01'");
 
         if (rs.isBeforeFirst()) {
 

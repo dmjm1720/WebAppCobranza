@@ -8,7 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -308,9 +307,7 @@ public class AvisoPagoBean extends DAO implements Serializable {
             recipientAddress[counter] = new InternetAddress(recipient.trim());
             counter++;
         }
-
-//        System.out.println(Arrays.toString(recipientAddress));
-//        System.out.println(Arrays.toString(recipientAddress));
+        
         message.addRecipients(Message.RecipientType.TO, recipientAddress);
         message.addRecipients(Message.RecipientType.CC, "Martinez-R@marubeni.com");
         message.addRecipients(Message.RecipientType.CC, "Solano-H@marubeni.com");
@@ -323,7 +320,7 @@ public class AvisoPagoBean extends DAO implements Serializable {
         message.setContent(multiParte);
 
         Transport t = session.getTransport("smtp");
-        t.connect("portal@marubeni.com.mx", "Gastos$0914");
+        t.connect("portal@marubeni.com.mx", "2023Sgyc$1959");
         t.sendMessage(message, message.getAllRecipients());
         t.close();
     }
